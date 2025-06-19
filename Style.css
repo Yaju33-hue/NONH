@@ -1,0 +1,174 @@
+body{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Search-box{
+    width: 30vw; 
+    height: 2.5vw;
+    color: rgb(255, 255, 255, 10);
+    background-color: rgb(0, 0, 0, 10);
+    border-color: rgb(0, 0, 145);
+    text-align: left;
+    outline: none;
+}
+
+#Search-box:focus-visible{
+    outline:2px solid rgb(0, 0, 255);
+}
+
+label{
+    color: rgb(0, 0, 0)
+}
+
+h2{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+
+
+.Nav{
+    color: rgb(255, 255, 255);
+    font-size: calc(1vw + 1vh);
+text-decoration: none;
+    }
+
+a:hover{
+    color: rgb(0, 0, 145);
+    border-color: rgb(0, 0, 145);
+    
+}
+
+.intro{
+    background-color: rgb(34, 29, 29);
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    padding-inline: 2vw;
+    align-items: center;
+}
+
+.Explore{
+    display: flex;
+    gap: 16px;
+}
+
+.A1{
+    background-color: rgb(34, 29, 29);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 90vw;
+    padding-inline: 2vw;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+
+
+img{
+    width: 35vw;
+    height: 45vh;
+    border-radius: 20px;
+    object-fit:fill;
+    margin: 10px 12px;
+}
+
+img:hover{
+    border: 2px solid rgb(0, 0, 145);
+    scale: 1.1;
+    border-radius: 0;
+}
+
+
+
+a{
+    text-align: right;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.Rank{
+    font-size: x-large;
+    width: 15px;
+}
+
+.Eps{
+    font-size: x-large;
+    text-align: left;
+    width: 3vw;
+}
+
+.Items{
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30vw;
+}
+
+
+
+.Current{
+    color: rgb(4, 4, 177);
+    font-size: large;
+    width: 5vw;
+}
+
+.right{
+    text-align: center;
+}
+
+.MENU{
+    background-color: rgb(34, 29, 29);
+    border-color: rgb(0, 0, 145);
+    text-align: auto;
+}
+
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer{
+color: rgb(0, 0, 145);
+}
+
+button{
+    background-color: rgb(34, 29, 29);
+    border-color: rgb(0, 0, 0);
+    
+}
+
+
+.button {
+    background-color: rgb(34, 29, 29);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+  }
+  
+  .return {
+    border-radius: 50%;
+}
+
+.A1:hover{
+    border-color: 2px solid rgb(0, 0, 145);
+
+}
+
+
+/.------------------slider------------------./

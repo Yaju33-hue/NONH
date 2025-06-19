@@ -1,0 +1,268 @@
+body{
+    background-color: rgba(0, 0, 0, 0.973);
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: 2vh;
+     padding-bottom: 35px;
+     padding-top: 5px;
+ }
+ 
+ #Search-box{
+     width: 30vw; 
+     height: 2.5vw;
+     color: rgb(255, 255, 255, 10);
+     background-color: rgb(0, 0, 0, 10);
+     border-color: rgb(0, 0, 145);
+     text-align: left;
+     outline: none;
+ }
+ 
+ #Search-box:focus-visible{
+     outline:2px solid rgb(0, 0, 255);
+ }
+ 
+ 
+ 
+ label{
+     color: rgb(0, 0, 0)
+ }
+ 
+ h2{
+     color: rgb(255, 255, 255);
+     text-align: center;
+     font-style: italic;
+     font-size: xx-large;
+    
+ }
+ 
+ h3{
+     color: rgb(255, 255, 255);
+     text-align: center;
+     font-style: italic;
+     font-size: xx-large;
+ }
+ 
+ .Nav{
+     color: rgb(255, 255, 255);
+     font-size: calc(1vw + 1vh);
+    text-decoration: none;
+     }
+ 
+ a:hover{
+     color: rgb(0, 0, 145);
+     border-color: rgb(0, 0, 145);
+ }
+ 
+ .intro{
+    background-color: rgb(34, 29, 29);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90vw;
+    padding-inline-end: 2vw;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-top:3px;
+    padding-bottom: 3px;
+}
+ 
+ .Explore{
+     display: flex;
+     gap: 16px;
+ }
+ 
+ .A1{
+     background-color: rgb(34, 29, 29);
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+     width: 30vw;
+     padding-inline: 2vw;
+    padding: 10px 12px;
+     color: rgb(255, 255, 255);
+     border-radius: 20px;
+    align-items: center;
+ }
+ 
+ 
+ 
+ a{
+     text-align: right;
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+ }
+ 
+ 
+ 
+ .Eps{
+    font-size: x-large;
+    text-align: left;
+    width: 3vw;
+}
+
+.Forms{
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30vw;
+    
+}
+ 
+#Form{
+    width: 30vw; 
+    height: 2.5vw;
+    color: rgb(255, 255, 255, 10);
+    background-color: rgb(0, 0, 0, 10);
+    border-color: rgb(0, 0, 145);
+    text-align: left;
+    outline: none;
+    align-items: center;
+}
+
+textarea{
+    width: 30vw; 
+    height: 30vh;
+    color: rgb(255, 255, 255, 10);
+    background-color: rgb(0, 0, 0, 10);
+    border-color: rgb(0, 0, 145);
+    text-align:;
+    outline: none;
+    resize: none;
+}
+
+::placeholder{
+    font-style: italic;
+}
+
+ .MENU{
+     background-color: rgb(34, 29, 29);
+     border-color: rgb(0, 0, 145);
+     text-align: auto;
+ }
+ 
+ .submit{
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 145);
+    font-size: large;
+    font-weight: bolder;
+ }
+
+ .submit:hover{
+    background-color: rgba(0, 0, 145, 0.363);
+    cursor: pointer;
+ }
+ 
+ .A1:hover{
+     border-color: 20px solid rgb(0, 0, 145);
+ }
+
+ footer{
+    font-style: italic;
+    font-weight: bolder;
+    font-size: larger;
+    color: rgb(0, 0, 145);
+ }
+ 
+ ::-webkit-scrollbar {
+ 
+     width: 10px; /* Set scrollbar width */
+   
+   }
+   
+   ::-webkit-scrollbar-track {
+   
+     background-color: rgb(34, 29, 29) /* Light gray track background */
+   
+     border-radius: 20px; /* Rounded corners for the track */
+   }
+   
+   
+   ::-webkit-scrollbar-thumb {
+   
+     background-color: rgb(255, 255, 255); /* Darker gray thumb background */
+   
+     border-radius: 20px; /* Rounded corners for the thumb */
+   
+   }
+
+   .btn {
+    background-color: rgb(10, 2, 126);
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: rgba(10, 2, 126, 0.425);
+  }
+
+  .Tog{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 3.5px;
+    padding-bottom: 3.5px;
+}
+
+.interface{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.dropbtn {
+    background-color: rgb(34, 29, 29);
+    color: white;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(34, 29, 29);
+    opacity: 0.75;
+    width: 10vw;
+    height: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding-top: 5px;
+  }
+  
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    font-size: large;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color:rgb(0, 0, 145);  
+    scale: 1.1;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+
+}
+  
+  .dropdown:hover .dropbtn {
+    background-color: rgb(34, 29, 29);
+}
+  

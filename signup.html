@@ -1,0 +1,76 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>No Anime No Life</title>
+        <link rel="stylesheet" href="signup.css" />
+      </head>
+
+
+      <body>
+        
+        <h1>
+          <div class="intro">
+              <div class="Tog">
+                <div class="dropdown">
+                  <button class="dropbtn" ><button class="btn"><i class="fa fa-bars"></i></button></button>
+                  <div class="dropdown-content">
+                    <a href="login.html">Login</a>
+                    <a href="Anime-website-alternative.html">Home</a>
+                    <a href="">About</a>
+                    <a href="Help.html">Help</a>
+                  </div>
+                </div>
+              <label for="Search-box"><input id="Search-box" type="text" placeholder="Search" /></label>
+    </div>
+                <div class="Explore">
+                 <a href="https://animeheaven.me/new.php" class="Nav">New</a> 
+                 <a href="https://animeheaven.me/bookmarks.php" class="Nav">Bookmark</a>
+                 <a href="https://animeheaven.me/popular.php" class="Nav">Popular</a>
+                 <a href="https://animeheaven.me/2024spring.php" class="Nav">spring</a>
+                 <a href="https://animeheaven.me/random.php" class="Nav">Random</a>
+                 <a href="Count.html" class="Nav">Count</a>
+               </div>
+    
+            </div>
+    </h1>
+
+<h2>Sign up</h2>
+        
+        <div class="A1">
+            <div Class="Forms">
+         <form action="/submit">
+          <p><label for="Form"><input id="Form" type="text" placeholder="Enter Your Name" required></label></p>
+          <p><label for="Form"><input id="Form" type="date" placeholder="Age" required></label></p>
+          <p><label for="Form"><input id="Form" type="email" placeholder="Enter Your Email" required /></label></p>
+          <p><label for="Form" class="P1"><input id="Form" type="text" placeholder="Enter Your Password" required></label></p>
+          <p><label for="Form" class="P2"><input id="Form" type="text" placeholder="Confirm Password" required></label></p>
+          <div class="interface">
+          <button type="submit" class="submit">Sign up</button>
+          <p>Already have an account? <a href="login.html">Sign in</a></p>
+          </div>
+          </form>
+        </div>
+
+        </div>
+
+      <      <script>
+        // Add an event listener to the form
+        document.querySelector("form").addEventListener("submit", function (event) {
+          // Get the password and confirm password fields
+          var password = document.querySelector(".P1 input").value;
+          var confirmPassword = document.querySelector(".P2 input").value;
+      
+          // Check if the passwords match
+          if (password !== confirmPassword) {
+            event.preventDefault(); // Prevent form submission
+            alert("Passwords do not match!"); // Show an error message
+          } else {
+            alert("Passwords match. Form submitted successfully!"); // Optional success message
+          }
+        });
+      </script>
+<footer>Thank you for your choosing to return</footer>
+    </body>
+</html>

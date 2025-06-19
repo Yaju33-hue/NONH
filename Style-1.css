@@ -1,0 +1,305 @@
+body{
+   background-color: rgba(0, 0, 0, 0.973);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5vh;
+    padding-bottom: 25px;
+}
+
+#Search-box{
+    width: 30vw; 
+    height: 5vh;
+    color: rgb(255, 255, 255, 10);
+    background-color: rgb(0, 0, 0, 10);
+    border-color: rgb(0, 0, 145);
+    text-align: left;
+    outline: none;
+    position: relative;
+}
+
+#Search-box:focus-visible{
+    outline:2px solid rgb(0, 0, 255);
+}
+
+
+
+label{
+    color: rgb(0, 0, 0)
+}
+
+h2{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-style: italic;
+    font-size: x-large;
+   
+}
+
+h3{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+.Nav{
+    color: rgb(255, 255, 255);
+    font-size: calc(1vw + 1vh);
+text-decoration: none;
+
+    }
+
+a:hover{
+    color: rgb(0, 0, 145);
+    border-color: rgb(0, 0, 145);
+}
+
+.intro{
+    background-color: rgb(34, 29, 29);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90vw;
+    height: 7vh;
+    padding-inline-end: 2vw;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-top:1px;
+    padding-bottom: 3px;
+    position: relative;
+    
+}
+
+#Search-box:active{
+    overflow: visible;
+}
+
+.Explore{
+    display: flex;
+    gap: 16px;
+    position: relative;
+}
+
+.A1{
+    background-color: rgb(34, 29, 29);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 90vw;
+    padding-inline: 2vw;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+
+
+img{
+    width: 35vw;
+    height: 45vh;
+    border-radius: 20px;
+    object-fit:fill;
+    margin: 2px 2px;
+}
+
+img:hover{
+scale: 1.035;
+border: 2px solid rgb(0, 0, 145);
+}
+
+
+
+a{
+    text-align: right;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.Rank{
+    font-size: x-large;
+    width: 20px;
+    text-align: left;
+    
+}
+
+.Eps{
+    font-size: x-large;
+    text-align: left;
+    width: 3vw;
+}
+
+.Items{
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30vw;
+}
+
+
+
+.Current{
+    color: rgb(4, 4, 177);
+    font-size: large;
+    width: 5vw;
+}
+
+.right{
+    text-align: center;
+}
+
+.MENU{
+    background-color: rgb(34, 29, 29);
+    border-color: rgb(0, 0, 145);
+    text-align: auto;
+}
+
+.down{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.side{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    width: 95vw;
+    height: fit-content;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 15px;
+    border-radius: 25px;
+}
+
+
+
+footer{
+color: rgb(0, 0, 145);
+}
+
+
+.A1:hover{
+    border-color: 20px solid rgb(0, 0, 145);
+}
+
+::-webkit-scrollbar {
+
+    width: 15px; /* Set scrollbar width */
+    
+  }
+  
+  
+  
+  ::-webkit-scrollbar-track {
+  
+    background-color: rgb(34, 29, 29); /* Light gray track background */
+    
+    border-radius: 20px;
+
+  }
+  
+  
+  
+  ::-webkit-scrollbar-thumb {
+  
+    background-color: rgb(255, 255, 255); /* Darker gray thumb background */
+  
+    border-radius: 20px; /* Rounded corners for the thumb */
+  }
+
+  .btn {
+    background-color: rgb(10, 2, 126);
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: rgba(10, 2, 126, 0.425);
+  }
+
+  .Tog{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 3.5px;
+    padding-bottom: 3.5px;
+}
+
+footer{
+    font-size: larger;
+    font-style: italic;
+    font-weight: 100;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.dropbtn {
+    background-color: rgb(34, 29, 29);
+    color: white;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(34, 29, 29);
+    opacity: 0.75;
+    width: 10vw;
+    height: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding-top: 5px;
+  }
+  
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    font-size: large;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color:rgb(0, 0, 145);  
+    scale: 1.1;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+
+}
+  
+  .dropdown:hover .dropbtn {
+    background-color: rgb(34, 29, 29);
+}
+
+#List li.focused {
+  background-color: rgb(0, 0, 145); /* Highlight color */
+  color: white; /* Text color for better contrast */
+  scale: 1.1; /* Slightly enlarge the focused item */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+

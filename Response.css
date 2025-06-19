@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(255, 255, 255);
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: 2vh;
+     padding-bottom: 35px;
+     padding-top: 5px;
+ }
+ 
+ p{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+ }

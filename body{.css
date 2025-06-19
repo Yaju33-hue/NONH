@@ -1,0 +1,19 @@
+body{
+    width: auto;
+}
+
+a:hover{
+color: green;
+}
+
+a:active{
+    color: blue;
+}
+
+a:visited{
+    color: red;
+}
+
+a{
+    color: pink;
+}

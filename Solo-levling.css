@@ -1,0 +1,452 @@
+body{
+    background-color: rgba(0, 0, 0, 0.973);
+    display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: 5vh;
+     padding-bottom: 30px;
+ }
+
+ #Search-box{
+    width: 30vw; 
+    height: 2.5vw;
+    color: rgb(255, 255, 255, 10);
+    background-color: rgb(0, 0, 0, 10);
+    border-color: rgb(0, 0, 145);
+    text-align: left;
+    outline: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#Search-box:focus-visible{
+    outline:2px solid rgb(0, 0, 255);
+}
+
+label{
+    color: rgb(0, 0, 0)
+}
+
+.Nav{
+    color: rgb(255, 255, 255);
+    font-size: calc(1vw + 1vh);
+text-decoration: none;
+/* align-items: flex-end; */
+    }
+
+    .intro{
+      background-color: rgb(34, 29, 29);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 90vw;
+      padding-inline-end: 2vw;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 15px;
+      padding-top:3px;
+      padding-bottom: 3px;
+  }
+    
+.Tog{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+    .Explore{
+        display: flex;
+        gap: 16px;
+    }
+
+    h2{
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-style: italic;
+        font-size: xx-large;
+       
+    }
+
+   .A1{
+      background-color: rgb(34, 29, 29);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      width: 5.7vw;
+      height: 12vh;
+      padding-inline: 2vw;
+      align-items: center;
+      color: rgb(255, 255, 255);
+      border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
+  }
+
+  .A2{
+      background-color: rgb(10, 2, 126);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+      width: fit-content;
+      height: 12vh;
+      padding-inline: 2vw;
+      align-items: center;
+      color: rgb(255, 255, 255);
+      border-radius: 20px;
+      font-weight: bold;
+  }
+    
+
+    .select{
+     display: flex;
+     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 16px;
+    width: 95vw;
+    height: fit-content;
+    padding: 20px;
+    padding-left: 20px;
+    border-radius: 25px;
+    padding-bottom: 50px;
+    text-decoration: none;
+    align-items: ;
+    }
+
+    .text{
+      letter-spacing: 1px;
+        font-style:italic;
+      border-right: .15em solid rgb(10, 2, 126);
+      height: 100%;
+      white-space: wrap;
+      padding-bottom: 10px;
+      padding-right: 5px;
+      overflow: hidden;
+      animation: typing 1.5s;
+      height: 22.4vh;
+    }
+    
+    @Keyframe cursor{
+      50%{border-color:transparent}
+    }
+    
+    @keyframes typing{
+      from{height:0}
+    }
+
+
+    .description{
+        background-color: rgb(34, 29, 29);
+        display: flex;
+        flex-direction: column;
+        width: 95vw;
+        height: fit-content;
+        padding-inline: 2vw;
+        padding-top: 0;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 20px;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        border-radius: 20px;
+      text-decoration: none;
+    }
+
+    .suggestion{
+      background-color: rgb(34, 29, 29);
+      display: flex;
+      flex-direction: column;
+      width: 25vw;
+      height: 45vh;
+      padding-inline: 1vw;
+      padding-top: 0px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      padding-right: 0px;
+      align-items: center;
+      color: rgb(255, 255, 255);
+      border-radius: 20px;
+    text-decoration: none;
+  }
+
+  .small{
+    height: 30vh;
+    width: 20vw;
+  }
+
+  .small:hover{
+    scale: 1.1;
+    border: 2px solid rgb(0, 0, 145);
+  }
+
+.column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+p{
+        font-style:italic;
+        font: bold;
+        font-size: larger;
+    }
+
+    .tags{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 10px;
+        width: 95vw;
+        height: 15vh;
+    }
+
+    .info{
+font-weight: bolder;
+font-size: xx-large;
+color: rgba(161, 159, 159, 0.87);
+    }
+
+    img{
+        width: 55vw;
+        height: 75vh;
+        border-radius: 20px;
+        object-fit:fill;
+        margin: 2px 2px;
+    }
+
+
+
+    a{
+      text-align: right;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+  }
+
+    .T{
+        color: rgb(10, 2, 126);
+    }
+    
+    .E{
+        color: rgb(34, 29, 29);
+    }
+
+
+
+.extra{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+    a:hover{
+        color: rgb(10, 2, 126);
+        scale: 1.1;
+    }
+
+
+
+    ::-webkit-scrollbar {
+
+        width: 10px; /* Set scrollbar width */
+      
+      }
+      
+      
+      
+      ::-webkit-scrollbar-track {
+      
+        background-color: rgb(34, 29, 29) /* Light gray track background */
+      
+        border-radius: 20px; /* Rounded corners for the track */
+
+        
+      }
+      
+      
+      
+      ::-webkit-scrollbar-thumb {
+      
+        background-color: rgb(255, 255, 255); /* Darker gray thumb background */
+      
+        border-radius: 20px; /* Rounded corners for the thumb */
+      
+      }
+
+      .B {
+      border-radius: 20px;
+      background-color:rgb(0, 0, 0);
+      border: none;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: fit-content;
+      height: fit-content;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    
+    .B span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+
+    .B span:after {
+      content: '\2b';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+      rotate: -90deg;
+      color: white;
+    }
+    
+    .B:hover span {
+      padding-right: 25px;
+    }
+    
+    .B:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  
+    .container {
+    position: relative;
+    width: 50%;
+  }
+
+  .B:hover{
+      color: rgb(10, 2, 126);
+      
+  }
+
+
+.R {
+  border-radius: 20px;
+  background-color:rgb(0, 0, 0);
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: fit-content;
+  height: fit-content;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.R span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.R span:after {
+  content: '\2605';
+  position: absolute;
+  opacity: 0;
+  top: -4.75px;
+  right: -25px;
+  transition: 0.5s;
+  rotate: -73deg;
+  color: white;
+
+}
+
+.R:hover span {
+  padding-right: 25px;
+}
+
+.R:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.container {
+position: relative;
+width: 50%;
+}
+
+.R:hover{
+  color: rgb(10, 2, 126);
+  
+}
+    .btn {
+        background-color: rgb(10, 2, 126);
+        display: flex;
+        flex-wrap: wrap;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      /* Darker background on mouse-over */
+      .btn:hover {
+        background-color: rgba(10, 2, 126, 0.425);
+      }
+
+      .dropbtn {
+        background-color: rgb(34, 29, 29);
+        color: white;
+        font-size: 16px;
+        border: none;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(34, 29, 29);
+        opacity: 0.75;
+        width: 10vw;
+        height: fit-content;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding-top: 5px;
+      }
+      
+      .dropdown-content a {
+        color: rgb(255, 255, 255);
+        padding: 10px 14px;
+        text-decoration: none;
+        display: block;
+        font-size: large;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {
+        background-color:rgb(0, 0, 145);  
+    }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+    
+    }
+      
+      .dropdown:hover .dropbtn {
+        background-color: rgb(34, 29, 29);
+    }
+       

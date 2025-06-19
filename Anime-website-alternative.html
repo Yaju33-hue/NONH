@@ -1,0 +1,765 @@
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>No Anime No Life</title>
+        <link rel="stylesheet" href="Style-1.css" />
+      </head>
+
+      <body>
+        <h1>
+
+          <div class="intro" id="target-div">
+              <div class="Tog">
+                <div class="dropdown">
+                  <button class="dropbtn" ><button class="btn"><i class="fa fa-bars"></i></button></button>
+                  <div class="dropdown-content">
+                    <a href="login.html">Sign in</a>
+                    <a href="Anime-website-alternative.html">Home</a>
+                    <a href="">About</a>
+                    <a href="Help.html">Help</a>
+                  </div>
+                  </div>
+                
+                <div>
+              <label for="Search-box">
+                <div id="trigger-div">
+                  <input type="text" id="Search-box" onkeyup="myFunction()" placeholder="Search for animes.." title="Type in a name">
+                </div>
+                <ul id="List">
+                  <li><a href="Haikyu.html">Haikyu-The-Dumpster-Battle</a></li>
+                  <li><a href="Glass.html">Glass of god</a></li>
+                  <li><a href="Dungeon.html">Delicious in dungeon</a></li>
+                  <li><a href="Blue-lock.html">Blue Lock:Episode Nagi</a></li>
+                  <li><a href="One-piece.html">One Piece</a></li>
+                  <li><a href="Blue-box.html">Blue Box</a></li>
+                  <li><a href="Dan-da-dan.html">Dan Da Dan</a></li>
+                  <li><a href="Affection.html">A Sign of Affection</a></li>
+                  <li><a href="Kaiju.html">Kaiju No. 8</a></li>
+                  <li><a href="Solo-levling.html">Solo Leveling</a></li>
+                </ul>
+              </label>
+            </div>
+  </div>
+           
+  
+
+  <div class="Explore">
+             <a href="https://animeheaven.me/new.php" class="Nav">New</a> 
+             <a href="https://animeheaven.me/bookmarks.php" class="Nav">Bookmark</a>
+             <a href="https://animeheaven.me/popular.php" class="Nav">Popular</a>
+             <a href="https://animeheaven.me/2024spring.php" class="Nav">spring</a>
+             <a href="https://animeheaven.me/random.php" class="Nav">Random</a>
+             <a href="Count.html" class="Nav">Count</a>
+           </div>
+
+        </div>
+</h1>
+
+      <script>
+              function myFunction() {
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById("Search-box");
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("List");
+                  li = ul.getElementsByTagName("li");
+                  for (i = 0; i < li.length; i++) {
+                      a = li[i].getElementsByTagName("a")[0];
+                      txtValue = a.textContent || a.innerText;
+                      
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) 
+                      {
+                          li[i].style.display = "";
+                      } 
+                      
+                      else {
+                          li[i].style.display = "none";
+                      }
+                  }
+              }
+
+              
+              
+  // Function to run when the search box is active
+  function toggleItemsVisibility(isActive) {
+    var items = document.getElementById("target-div").getElementsByTagName("li");
+    for (var i = 0; i < items.length; i++) {
+      if (isActive) {
+        // Show all items when the search box is active
+        items[i].style.display = "block";
+      } else {
+        // Hide all items when the search box is inactive
+        items[i].style.display = "none";
+      }
+    }
+  }
+
+  // Add event listeners for focus and blur
+  var searchBox = document.getElementById("Search-box");
+  searchBox.addEventListener("focus", function () {
+    toggleItemsVisibility(true); // Run the code when the search box is active
+  });
+
+  searchBox.addEventListener("blur", function () {
+    toggleItemsVisibility(false); // Stop the code when the search box is inactive
+  });
+
+  // Ensure items are hidden on page load
+  window.addEventListener("load", function () {
+    toggleItemsVisibility(false); // Hide all items initially
+  });
+
+  
+
+              </script>  
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchBox = document.getElementById("Search-box");
+    const list = document.getElementById("List");
+    const listItems = list.getElementsByTagName("li");
+    let currentIndex = -1; // Keeps track of the currently focused item
+
+    // Function to toggle visibility of items
+    function toggleItemsVisibility(isActive) {
+      for (let i = 0; i < listItems.length; i++) {
+        listItems[i].style.display = isActive ? "block" : "none";
+      }
+    }
+
+    // Show items when the search box is focused
+    searchBox.addEventListener("focus", function () {
+      toggleItemsVisibility(true);
+    });
+
+    // Hide items when the search box loses focus
+    searchBox.addEventListener("blur", function () {
+      setTimeout(() => toggleItemsVisibility(false), 100); // Delay to allow click event to process
+    });
+
+    // Filter functionality
+    searchBox.addEventListener("input", function () {
+      const filter = searchBox.value.toUpperCase();
+      currentIndex = -1; // Reset the index when typing
+
+      for (let i = 0; i < listItems.length; i++) {
+        const link = listItems[i].querySelector("a");
+        if (link && link.textContent.toUpperCase().indexOf(filter) > -1) {
+          listItems[i].style.display = "block";
+        } else {
+          listItems[i].style.display = "none";
+        }
+      }
+    });
+
+    // Arrow key navigation
+    searchBox.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowDown") {
+        // Move focus to the next item
+        event.preventDefault();
+        if (currentIndex < listItems.length - 1) {
+          currentIndex++;
+          updateFocus();
+        }
+      } else if (event.key === "ArrowUp") {
+        // Move focus to the previous item
+        event.preventDefault();
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateFocus();
+        }
+      } else if (event.key === "Enter") {
+        // Navigate to the selected item's link
+        if (currentIndex >= 0 && currentIndex < listItems.length) {
+          const link = listItems[currentIndex].querySelector("a");
+          if (link) {
+            window.location.href = link.href; // Navigate to the link
+          }
+        }
+      }
+    });
+
+    // Function to update focus on the list items
+    function updateFocus() {
+      // Remove focus from all items
+      for (let i = 0; i < listItems.length; i++) {
+        listItems[i].classList.remove("focused");
+      }
+
+      // Add focus to the current item
+      if (currentIndex >= 0 && currentIndex < listItems.length) {
+        listItems[currentIndex].classList.add("focused");
+        listItems[currentIndex].scrollIntoView({ block: "nearest" });
+      }
+    }
+
+    // Prevent blur when clicking on a dropdown item
+    for (let i = 0; i < listItems.length; i++) {
+      listItems[i].addEventListener("mousedown", function (event) {
+        event.preventDefault(); // Prevent blur
+      });
+
+      // Navigate to the link when clicking on a dropdown item
+      listItems[i].addEventListener("click", function () {
+        const link = this.querySelector("a");
+        if (link) {
+          window.location.href = link.href; // Navigate to the link
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+  .top {
+    border-radius: 4px;
+    background-color:rgb(34, 29, 29);
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 10vw;
+    height: 12vh;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .top span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .top span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    rotate: -90deg;
+
+  }
+  
+  .top:hover span {
+    padding-right: 25px;
+  }
+  
+  .top:hover span:after {
+    opacity: 1.5;
+    right: 0;
+  }
+
+  .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgb(34, 29, 29);
+  overflow: hidden;
+  width: 42.5vw;
+  height: 0;
+  transition: .8s ease;
+  opacity: 0.5;
+  border-radius: 20px;
+  pointer-events: none;
+  padding-right: 1px;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+  scale: 1.02;
+}
+
+.text {
+  white-space: nowrap; 
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#List {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: left;
+  position: absolute;
+  width: 30vw;
+  padding-top: 3px;
+}
+
+#List li a {
+  border: 1.5px solid rgb(0, 0, 0);
+  margin-top: -1px; /* Prevent double borders */
+  background-color: rgb(34, 29, 29);
+  padding: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  display: block
+}
+
+#List li a:hover:not(.header) {
+  background-color: rgb(10, 2, 126); /* Hover background color */
+  scale: 1.1; /* Slightly enlarge the item */
+  transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+  </style>     
+      
+
+
+       
+<h2>TOP 10 ANIME</h2>
+        <div class="side">
+              
+            <div class="A1">
+              
+              <div class="Rank">
+              <p>1</p>
+              </div>
+              
+              <div>
+              <a href="Haikyu.html"><img src="Images\haikyu-the-dumpster-battle.jpg"></a>
+              </div>
+
+              <div Class="Items">
+            <p style="text-align: center">  <a href="Haikyu.html">Haikyu!! The Dumpster Battle</a></p>
+              </div>
+              
+            </div>
+    
+    
+            <div class="A1">
+              
+              <div class="Rank">
+              <p>2</p>
+              </div>
+              
+              <div>
+              <a href="Glass.html"><img src="Images\GKRDI4wXQAAwkcf.jpeg"></a>
+              </div>
+              
+              <div Class="Items">
+              <p style="text-align: center"><a href="Glass.html">Glass of god</a></p> 
+              </div>
+              
+            </div>
+    
+            <div class="A1">
+
+              <div class="Rank">
+              <p>3</p>
+              </div>
+
+              <div>
+              <a href="Dungeon.html"><img src="Images\delicious-in-dungeon-anime-series-coming-to-netflix-here-are-all-details.jpg"></a>
+              </div>
+
+              <div Class="Items">
+              <p style="text-align: center"><a href="Dungeon.html">Delicious in dungeon</a></p>
+              </div>
+             
+             </div>
+            
+    
+            <div class="A1">
+              
+                <div class="Rank">
+              <p>4</p>
+              </div>
+
+              <div>
+              <a href="Blue-lock.html"><img src="Images\Anime_BlueLockMovie_EpisodeNagi.jpg"></a>
+              </div>
+
+              
+              <div Class="Items">
+              <p style="text-align: center"><a href="Blue-lock.html">Blue Lock: Episode Nagi</a></p>
+              </div>
+
+            </div>
+    
+            <div class="A1">
+              
+             <div class="Rank">
+              <p>5</p>
+              </div>
+
+              <div>
+              <a href="One-piece.html"><img src="Images\one-piece-5k-wallpaper-5120x3072-23624.jpg"></a>
+              </div>
+
+              <div Class="Items">
+              <p style="text-align: center"><a href="One-piece.html">One Piece</a></p>
+              </div>
+
+            </div>
+    
+            <div class="A1">
+              
+                <div class="Rank">
+              <p>6</p>
+              </div>
+
+              <div>
+              <a href="Blue-box.html"><img src="Images\GRoqdbzXAAEwd8i-e1720109508514.jpeg"></a>
+              </div>
+
+              <div Class="Items">
+              <p style="text-align: center"><a href="Blue-box.html">Blue Box</a></p>
+              </div>
+
+            </div>
+    
+            <div class="A1">
+             
+              <div class="Rank">
+              <p>7</p>
+              </div>
+            
+              <div>
+              <a href="Dan-da-dan.html"><img src="Images\filters_quality(95)format(webp) (1).webp"></a>
+              </div>
+
+              <div Class="Items">
+              <p style="text-align: center"><a href="Dan-da-dan.html">Dan Da Dan</a></p>
+              </div>
+
+            </div>
+    
+            <div class="A1">
+              
+              <div class="Rank">
+              <p>8</p>
+              </div>
+             
+              <div>
+              <a href="Affection.html"><img src="Images\h.webp"></a>
+              </div>
+             
+              <div Class="Items">
+              <p style="text-align: center"><a href="Affection.html">A Sign of Affection</a></p>
+              </div>
+
+            </div>
+    
+            <div class="A1">
+             
+           <div class="Rank">
+              <p>9</p>
+              </div>
+             
+              <div>
+              <a href="Kaiju.html"><img src="Images\thumb-1920-1369164.png"></a>
+              </div>
+             
+              <div Class="Items">
+              <p style="text-align: center"><a href="Kaiju.html">Kaiju No. 8</a></p>
+              </div>
+              
+            </div>
+    
+            <div class="A1">
+              
+                <div class="Rank">
+              <p>10</p>
+              </div>
+              
+              <div>
+              <a href="Solo-levling.html"><img src="Images\solo-leveling-featured-image.avif"></a>
+              </div>
+              
+              <div Class="Items">
+              <p style="text-align: center"><a href="Solo-levling.html">Solo Leveling</a></p>
+              </div>
+             
+            </div>
+    
+    
+    
+          </div>
+    
+
+
+ <h3>HOTTEST ANIME</h3>
+
+<div class="down">
+        <div class="A1">
+          <div class="Rank">
+          <p>1</p>
+          </div>
+          <div class="container">
+  <a href="Haikyu.html"><img src="Images\haikyu-the-dumpster-battle.jpg"  class="image"></a>
+  <div class="overlay">
+    <div class="text">Watch</div>
+  </div>
+</div>
+          <div class="Eps">
+          <p>1</p>
+          </div>
+          <div Class="Items">
+        <p style="text-align: center">  <a href="Haikyu.html">Haikyu!! The Dumpster Battle</a></p>
+          <p style="text-align: center">Haikyū gomibako batoru</p>
+          <p style="text-align: center">ハイキュー ゴミ箱バトル</p>
+          </div>
+          <div class="Current">
+          <p style="text-align: center">Movie</p>
+         </div>
+        </div>
+
+
+        <div class="A1">
+          <div class="Rank">
+          <p>2</p>
+          </div>
+          <div class="container">
+            <a href="Glass.html"><img src="Images/GKRDI4wXQAAwkcf.jpeg"  class="image"></a>
+            <div class="overlay">
+              <div class="text">Watch</div>
+            </div>
+          </div>
+          <div class="Eps">
+          <p>11</p>
+          </div>
+          <div Class="Items">
+          <p style="text-align: center"><a href="Glass.html">Glass of god</a></p>
+          <p style="text-align: center">Kami no garasu</p>
+          <p style="text-align: center">神のガラス</p>
+          </div>
+          <div class="Current">
+          <p style="text-align: center">On going</p>
+         </div>
+        </div>
+
+        <div class="A1">
+          <div class="Rank">
+          <p>3</p>
+          </div>
+          <div class="container">
+            <a href="Dungeon.html"><img src="Images/delicious-in-dungeon-anime-series-coming-to-netflix-here-are-all-details.jpg"  class="image"></a>
+            <div class="overlay">
+              <div class="text">Watch</div>
+            </div>
+          </div>
+          <div class="Eps">
+          <p>24</p>
+          </div>
+          <div Class="Items">
+          <p style="text-align: center"><a href="Dungeon.html">Delicious in dungeon</a></p>
+          <p style="text-align: center">Dungeon meshi</p>
+          <p style="text-align: center">ダンジョンでも美味しい</p>
+          </div>
+          <div class="Current">
+          <p style="text-align: center">On going</p>
+         </div>
+        </div>
+
+        <div class="A1">
+          <div class="Rank">
+          <p>4</p>
+          </div>
+          <div class="container">
+            <a href="Blue-lock.html"><img src="Images\Anime_BlueLockMovie_EpisodeNagi.jpg"  class="image"></a>
+            <div class="overlay">
+              <div class="text">Watch</div>
+            </div>
+          </div>
+          <div class="Eps">
+          <p>1</p>
+          </div>
+          <div Class="Items">
+          <p style="text-align: center"><a href="Blue-lock.html">Blue Lock: Episode Nagi</a></p>
+          <p style="text-align: center">Burūrokku episōdo nagi</p>
+          <p style="text-align: center">ブルーロック エピソード ナギ</p>
+          </div>
+          <div class="Current">
+          <p style="text-align: center">Movie</p>
+         </div>
+        </div>
+
+        <div class="A1">
+          <div class="Rank">
+          <p>5</p>
+          </div>
+          <div class="container">
+            <a href="One-piece.html"><img src="Images\one-piece-5k-wallpaper-5120x3072-23624.jpg"  class="image"></a>
+            <div class="overlay">
+              <div class="text">Watch</div>
+            </div>
+          </div>
+          <div class="Eps">
+          <p>1122</p>
+          </div>
+          <div Class="Items">
+          <p style="text-align: center"><a href="One-piece.html">One Piece</a></p>
+          <p style="text-align: center">Wanpīsu</p>
+          <p style="text-align: center">ワンピース</p>
+          </div>
+          <div class="Current">
+          <p style="text-align: center">On going</p>
+         </div>
+        </div>
+
+        <div class="A1">
+          <div class="Rank">
+          <p>6</p>
+          </div>
+          <div class="container">
+            <a href="Blue-box.html"><img src="Images\GRoqdbzXAAEwd8i-e1720109508514.jpeg"  class="image"></a>
+            <div class="overlay">
+              <div class="text">Watch</div>
+            </div>
+          </div>
+          <div class="Eps">
+          <p>6</p>
+          </div>
+          <div Class="Items">
+          <p style="text-align: center"><a href="Blue-box.html">Blue Box</a></p>
+          <p style="text-align: center">Burūbokkusu</p>
+          <p style="text-align: center">ブルーボックス</p>
+          </div>
+          <div class="Current">
+          <p style="text-align: center">On going</p>
+         </div>
+        </div>
+
+        <div class="A1">
+          <div class="Rank">
+          <p>7</p>
+          </div>
+          <div class="container">
+            <a href="Dan-da-dan.html"><img src="Images\filters_quality(95)format(webp) (1).webp"  class="image"></a>
+            <div class="overlay">
+              <div class="text">Watch</div>
+            </div>
+          </div>
+          <div class="Eps">
+          <p>2</p>
+          </div>
+          <div Class="Items">
+          <p style="text-align: center"><a href="Dan-da-dan.html">Dan Da Dan</a></p>
+          <p style="text-align: center">Dan da dan</p>
+          <p style="text-align: center">ダン・ダ・ダン</p>
+          </div>
+          <div class="Current">
+          <p style="text-align: center">On going</p>
+         </div>
+        </div>
+
+        <div class="A1">
+          <div class="Rank">
+          <p>8</p>
+          </div>
+          <div class="container">
+            <a href="Affection.html"><img src="Images\h.webp"  class="image"></a>
+            <div class="overlay">
+              <div class="text">Watch</div>
+            </div>
+          </div>
+          <div class="Eps">
+          <p>12</p>
+          </div>
+          <div Class="Items">
+          <p style="text-align: center"><a href="Affection.html">A Sign of Affection</a></p>
+          <p style="text-align: center">Aijō no shirushi</p>
+          <p style="text-align: center">愛情のしるし</p>
+          </div>
+          <div class="Current">
+          <p style="text-align: center">Completed</p>
+         </div>
+        </div>
+
+        <div class="A1">
+          <div class="Rank">
+          <p>9</p>
+          </div>
+          <div class="container">
+            <a href="Kaiju.html"><img src="Images\thumb-1920-1369164.png"  class="image"></a>
+            <div class="overlay">
+              <div class="text">Watch</div>
+            </div>
+          </div>
+          <div class="Eps">
+          <p>12</p>
+          </div>
+          <div Class="Items">
+          <p style="text-align: center"><a href="Kaiju.html">Kaiju No. 8</a></p>
+          <p style="text-align: center">Kaijū 8-gō</p>
+          <p style="text-align: center">怪獣8号</p>
+          </div>
+          <div class="Current">
+          <p style="text-align: center">On going</p>
+         </div>
+        </div>
+
+        <div class="A1">
+          <div class="Rank">
+          <p>10</p>
+          </div>
+          <div class="container">
+            <a href="Solo-levling.html"><img src="Images/S.avif"  class="image"></a>
+            <div class="overlay">
+              <div class="text">Watch</div>
+            </div>
+          </div>
+          <div class="Eps">
+          <p>12</p>
+          </div>
+          <div Class="Items">
+          <p style="text-align: center"><a href="Solo-levling.html">Solo Leveling</a></p>
+          <p style="text-align: center">Sororeberingu</p>
+          <p style="text-align: center">ソロレベリング</p>
+          </div>
+          <div class="Current">
+          <p style="text-align: center">On going</p>
+         </div>
+        </div>
+
+       
+
+
+
+
+      </div>
+
+
+
+
+<button class="top"><span><a href="#top">TOP</a></span></button>
+    <script src="Search-bar.js"></script>
+
+<footer>Welcome to the end of the page</footer>
+    
+    </body>
+
+   
+
+</html>
